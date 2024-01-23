@@ -13,6 +13,6 @@ export const INIITIAL_APP_STATE: TAppState = {
     cols: 0,
     rows: 0,
   },
-  noOfSteps: 0,
+
   steps: [],
 };
