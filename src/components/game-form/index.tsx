@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { THandleGameInputs } from "../../types/types";
 
-const MINIMUM_NO_OF_ROWS = 5; //Reason: no magic number
+const MINIMUM_NO_OF_ROWS = 5;
 const MINIMUM_NO_OF_COLS = 5;
-const MINIMUM_NO_OF_STEPS = 1;
 
 type GameFormInputs = {
   handleGameInput: (props: THandleGameInputs) => void;
@@ -21,23 +20,7 @@ const GameForm: React.FC<GameFormInputs> = ({
         e.preventDefault();
         setGameIsOn(true);
       }}>
-      <div>
-        <label htmlFor="no-of-steps">Number of steps to complete game:</label>
-        <input
-          onChange={(e) =>
-            handleGameInput({
-              action: "set-step-count",
-              payload: +e.target.value,
-            })
-          }
-          className="border border-gray-600 ml-3 p-1 rounded-lg"
-          type="number"
-          min={MINIMUM_NO_OF_STEPS}
-          id="no-of-rows"
-          placeholder="Enter number of steps"
-          required
-        />
-      </div>
+      <div></div>
       <div className="mt-2">
         <label htmlFor="no-of-rows">Number of rows:</label>
         <input

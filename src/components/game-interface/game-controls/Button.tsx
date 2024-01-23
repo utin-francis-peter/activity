@@ -1,4 +1,3 @@
-import React from "react";
 import { TButton } from "../../../types/types";
 
 const Button = ({ children, onClick }: TButton) => {

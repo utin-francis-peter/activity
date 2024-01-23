@@ -8,10 +8,10 @@ const GameInterface: React.FC<{
   gameInputs: TAppState;
   addStep: (step: TStep) => void;
   handleBotPosition: (position: TPosition) => void;
-}> = ({ gameInputs, addStep, handleBotPosition }) => {
+  noOfSteps: number;
+}> = ({ gameInputs, addStep, handleBotPosition, noOfSteps }) => {
   // dimension should be dynamic to controls number of rows and columns
-  const { botPosition, cookiePosition, dimension, noOfSteps, steps } =
-    gameInputs;
+  const { botPosition, cookiePosition, dimension, steps } = gameInputs;
   const handleMovement = (
     step: TStep,
     x = botPosition.x,
